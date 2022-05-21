@@ -30,5 +30,10 @@ namespace KeyboardLogger
                 _listener.OnKeyPressed -= OnPressCalled;
             }
         }
+
+        private void OnFormClosed(object sender, FormClosedEventArgs e)
+        {
+            _listener.UnHookKeyboard();
+        }
     }
 }
