@@ -14,7 +14,7 @@ namespace KeyboardLogger
         }
 
         private void OnPressCalled(object sender, KeyPressedArgs e)
-            => loggerTextBox.Text += $" {e.KeyPressed.ToString()}";
+            => loggerTextBox.Text += $" {e.KeyPressed}";
 
         private void OnDisabledToggle(object sender, System.EventArgs e)
             => loggerTextBox.Enabled = !disabledToggle.Checked;
